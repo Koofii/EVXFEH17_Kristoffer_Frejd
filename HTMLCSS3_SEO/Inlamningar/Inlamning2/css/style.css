@@ -1,0 +1,115 @@
+*{
+    font-family: 'Merriweather', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* här sätter vi en bredd på 100% samt att max breden är 800px. Vi sätter en bakgrundsfärg och centrerar innehållet*/
+body{
+    width: 100%;
+    max-width: 50em;
+    background-color: #e9967a;
+    margin: auto;
+}
+li{
+    list-style: none;
+}
+/* för att få menyn horisontellt samt sätter en bakgrundsgärg*/
+header ul{
+    list-style: none;
+    background-color: #333;
+    width: 100%;
+    display: table;
+    text-align: center; 
+
+}
+header li{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: inline-block;
+    float: none;
+    width: 20%;
+    text-align: center;
+
+}
+/*kodblock nedan sätter vi vad som händer med alla länkar i menyn*/
+a:link{
+    text-decoration: none;
+    color: white;
+}
+nav a:visited{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    background-color: #555;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+nav a:active{
+    text-decoration: none;
+}
+/*med hjälp av adjecent sibling selector sätter vi en gröngul färg på ex2*/
+.logo h2 + h3{
+    color: greenyellow;
+}
+.syndicate{
+    background-color: slategray;
+    margin: 1em;
+}
+/*kodblock nedan sätter vi en skuggfärg både som standard och en annan när man hover över*/
+.syndicate{
+    box-shadow: 0px 3px 1px purple;
+}
+.syndicate:hover{
+    box-shadow: 2px 2px 1px #B7DAFF;    
+}
+/* alla paragrafer i artiklarna sätter vi med en smokewhite färg samt justerar padding och margin*/
+.syndicate article p{
+    color: whitesmoke;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+.syndicate header{
+    text-align: center;
+    color: purple;
+    padding-top: 10px;
+}
+.syndicate div h3{
+    padding: 0.5em;
+    color: whitesmoke;
+}
+.syndicate footer{
+    color: whitesmoke;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+aside{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #F37BC8
+}
+.blog_summary ul a li{
+    margin: 0.5em;
+    padding: 0.5em;
+}
+.blog_summary a:hover{
+    color: red;
+}
+.blog_summary > span{
+    color: yellow;
+}
+#na a{
+    color: purple;
+}
+.contact{
+    margin-top: 0.5em;
+    text-align: center;
+}
+.tel{
+    color:black;
+}
+.tel ~ .web{
+    color:white;
+}
