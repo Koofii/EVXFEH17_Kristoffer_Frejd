@@ -77,7 +77,7 @@ vi sätter allt inom footer och div h3 med textfärg whitesmoke och samt padding
     padding: 0.5em;
     margin-bottom: 1em;
 }
-.syndicate div h3{
+.syndicate div{
     padding: 0.5em;
     color: whitesmoke;
 }
