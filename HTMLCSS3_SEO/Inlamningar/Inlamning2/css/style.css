@@ -21,14 +21,10 @@ header ul{
     width: 100%;
     display: table;
     text-align: center; 
-
 }
 /* för att få menyn horisontellt samt sätter en bakgrundsfärg*/
 header li{
-    padding-top: 12px;
-    padding-bottom: 12px;
     display: inline-block;
-    float: none;
     width: 20%;
     text-align: center;
 
@@ -37,6 +33,11 @@ header li{
 a:link{
     text-decoration: none;
     color: white;
+}
+nav a{
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 nav a:visited{
     text-decoration: none;
@@ -93,10 +94,11 @@ aside{
     background-color: #F37BC8
 }
 /* här sätter vi margin, padding och olika färger tillhörande klassen blog_summary*/
-.blog_summary ul a li{
+.blog_summary ul li{
     margin: 0.5em;
     padding: 0.5em;
 }
+
 .blog_summary a:hover{
     color: red;
 }
