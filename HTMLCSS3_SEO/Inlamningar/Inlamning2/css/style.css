@@ -67,15 +67,15 @@ nav a:active{
 }
 /* alla paragrafer i artiklarna sätter vi med en smokewhite färg samt justerar padding och margin
 vi sätter allt inom footer och div h3 med textfärg whitesmoke och samt padding+margin*/
-.syndicate article p{
-    color: whitesmoke;
-    padding: 0.5em;
-    margin-bottom: 1em;
-}
 .syndicate header{
     text-align: center;
     color: purple;
     padding-top: 10px;
+}
+.syndicate article p{
+    color: whitesmoke;
+    padding: 0.5em;
+    margin-bottom: 1em;
 }
 .syndicate div h3{
     padding: 0.5em;
