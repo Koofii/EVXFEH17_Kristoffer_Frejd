@@ -14,7 +14,7 @@ body{
 li{
     list-style: none;
 }
-/* för att få menyn horisontellt samt sätter en bakgrundsgärg*/
+
 header ul{
     list-style: none;
     background-color: #333;
@@ -23,6 +23,7 @@ header ul{
     text-align: center; 
 
 }
+/* för att få menyn horisontellt samt sätter en bakgrundsfärg*/
 header li{
     padding-top: 12px;
     padding-bottom: 12px;
@@ -32,7 +33,7 @@ header li{
     text-align: center;
 
 }
-/*kodblock nedan sätter vi vad som händer med alla länkar i menyn*/
+/*kodblock nedan sätter vi vad som händer med alla länkar i menyn förutom alink som är generell*/
 a:link{
     text-decoration: none;
     color: white;
@@ -62,9 +63,10 @@ nav a:active{
     box-shadow: 0px 3px 1px purple;
 }
 .syndicate:hover{
-    box-shadow: 2px 2px 1px #B7DAFF;    
+    box-shadow: 2px 2px 1px #B7D9FF;    
 }
-/* alla paragrafer i artiklarna sätter vi med en smokewhite färg samt justerar padding och margin*/
+/* alla paragrafer i artiklarna sätter vi med en smokewhite färg samt justerar padding och margin
+vi sätter allt inom footer och div h3 med textfärg whitesmoke och samt padding+margin*/
 .syndicate article p{
     color: whitesmoke;
     padding: 0.5em;
@@ -90,6 +92,7 @@ aside{
     padding-bottom: 15px;
     background-color: #F37BC8
 }
+/* här sätter vi margin, padding och olika färger tillhörande klassen blog_summary*/
 .blog_summary ul a li{
     margin: 0.5em;
     padding: 0.5em;
@@ -110,6 +113,7 @@ aside{
 .tel{
     color:black;
 }
+/*här sätter vi färgen vit med hjälp av General sibling combinator*/
 .tel ~ .web{
     color:white;
 }
