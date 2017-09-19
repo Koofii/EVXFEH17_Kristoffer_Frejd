@@ -65,8 +65,9 @@ nav ul ul ul{
 }
 nav ul li span{
     background-color: slategray;
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px 5px 5px 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
 }
 /* tar fram menyn när man hover över */
 nav ul li:hover ul li{
