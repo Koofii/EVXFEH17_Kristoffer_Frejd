@@ -8,8 +8,7 @@
 body{
     width: 100%;
     max-width: 50em;
-    background: url(https://previews.123rf.com/images/bastianlinder/bastianlinder1205/bastianlinder120500143/13554773-Dark-smoke-with-beautiful-shape-in-front-of-white-background-Stock-Photo.jpg)
-    background-size: auto auto;
+	background: url(https://previews.123rf.com/images/alexeybykov/alexeybykov1308/alexeybykov130800064/21475926-Grey-background-Painted-iron-old-wall--Stock-Photo.jpg) no-repeat;
     background-size: cover;
     margin: auto;
 }
@@ -17,6 +16,9 @@ li{
     list-style: none;
 }
 
+}
+a{
+    text-decoration: none;
 }
 /*kodblock nedan sätter vi vad som händer med alla länkar i menyn förutom alink som är generell*/
 a:link{
@@ -51,17 +53,26 @@ nav ul li{
     background: #3B5998;
     text-align: center;
 }
+/* döljer undermenyn och bestämmer position */
 nav ul ul li{
     position: relative;
     display: none;
     opacity: 0.95;
 }
+/* döljer underundermenyn */
 nav ul ul ul{
     display: none;
 }
+nav ul li span{
+    background-color: slategray;
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+}
+/* tar fram menyn när man hover över */
 nav ul li:hover ul li{
     display: block;
 }
+/* För att få till position på undermenyns undermeny  */
 nav ul ul li:hover ul{
     display: block;
     position: absolute;
@@ -74,20 +85,32 @@ nav ul ul li:hover ul{
 .logo h2 + h3{
     color: #258B25;
 }
+/*kodblock nedan sätter vi en skuggfärg både som standard och en annan när man hover över*/
 .syndicate{
     background-color: #3A3B3D;
     margin: 1em;
-}
-/*kodblock nedan sätter vi en skuggfärg både som standard och en annan när man hover över*/
-.syndicate{
     box-shadow: 0px 3px 1px #5B87DF;
 }
 .syndicate:hover{
-    box-shadow: 2px 2px 1px #5B87DF; 
+    background-color: #545658;
 }
+/* var tredje med början på den andra färgas i annan färg */
 a:nth-of-type(3n+2) .syndicate{
-    background-color: black;
+    background-color: slateblue;
 }
+/* var tredje med färgad i slateblue färgas annorlunda när man hover över */
+a:nth-of-type(3n+2) .syndicate:hover{
+    background-color: #7465DA;
+}
+a:first-of-type .syndicate{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+a:nth-last-of-type(1) .syndicate{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 /* alla paragrafer i artiklarna sätter vi med en smokewhite färg samt justerar padding och margin
 vi sätter allt inom footer och div h3 med textfärg whitesmoke och samt padding+margin*/
 .syndicate header{
@@ -115,6 +138,9 @@ aside{
     padding-bottom: 15px;
     background-color: #3B5998;
 }
+.blog_summary{
+    border-radius: 50px 50px 50px 50px;
+}
 /* här sätter vi margin, padding och olika färger tillhörande klassen blog_summary*/
 .blog_summary ul li{
     margin: 0.5em;
@@ -131,8 +157,11 @@ aside{
 .blog_summary > span{
     color: black;
 }
-#na a{
-    color: whitesmoke;;
+#na a{    
+    color: black;
+}
+#na a:hover{
+    color:#3B3B3B;
 }
 .contact{
     margin-top: 0.5em;
