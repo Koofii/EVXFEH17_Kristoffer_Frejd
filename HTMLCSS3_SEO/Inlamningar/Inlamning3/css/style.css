@@ -8,85 +8,50 @@
 body{
     width: 100%;
     max-width: 50em;
-	background: url(https://previews.123rf.com/images/alexeybykov/alexeybykov1308/alexeybykov130800064/21475926-Grey-background-Painted-iron-old-wall--Stock-Photo.jpg) no-repeat;
+	background-color: #D6D3D3;
     background-size: cover;
     margin: auto;
 }
-li{
-    list-style: none;
-}
-
-}
 a{
     text-decoration: none;
+    color: white;
 }
 /*kodblock nedan sätter vi vad som händer med alla länkar i menyn förutom alink som är generell*/
 a:link{
     text-decoration: none;
     color: white;
 }
-nav a{
-    display: block;
-    text-decoration: none;
+li{
+    list-style: none;
 }
-nav a:visited{
-    text-decoration: none;
-    color: white;
-}
-nav a:hover{
-    background-color: slategray;
-}
-nav a:active{
-    text-decoration: none;
-}
-nav li li:nth-last-of-type(1), nav li li:nth-last-of-type(1){
-    border-radius: 0px 0px 10px 10px;
-}
-nav li li:nth-last-of-type(1) a, nav li li:nth-last-of-type(1) a{
-    border-radius: 0px 0px 10px 10px;
-}
-nav ul li{
-    float: left;
-    width: 160px;
-    height: 40px;
+label{
+    color: #3B5998;
     line-height: 40px;
-    background: #3B5998;
-    text-align: center;
+    font-size: 2em;
+    cursor: pointer;
 }
-/* döljer undermenyn och bestämmer position */
+#nav-toggle{
+    display: none;
+}
+#nav-toggle:checked + #wrapper nav{
+    display: block;
+}
+nav{
+    background-color: grey;
+}
 nav ul ul li{
-    position: relative;
+    margin-left: 20px;
+}
+nav ul ul li a{
+    color:green;
+}
+nav ul ul ul li a{
+    color: blue;
+}
+
+nav{
     display: none;
-    opacity: 0.9;
 }
-/* döljer underundermenyn */
-nav ul ul ul{
-    display: none;
-}
-nav ul li span{
-    background-color: slategray;
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 5px;
-}
-/* tar fram menyn när man hover över */
-nav ul li:hover ul li{
-    display: block;
-}
-/* För att få till position på undermenyns undermeny  */
-nav ul ul li:hover ul{
-    display: block;
-    position: absolute;
-    width: 160px;
-    left: 160px;
-    top:0px;
-    font-size: 9pt;
-}
-/*med hjälp av adjecent sibling selector sätter vi en gröngul färg på ex2*/
-.logo h2 + h3{
-    color: #258B25;
-}
-/*kodblock nedan sätter vi en skuggfärg både som standard och en annan när man hover över*/
 .syndicate{
     background-color: #3A3B3D;
     margin: 1em;
@@ -175,3 +140,74 @@ aside{
 .tel ~ .web{
     color:black;
 }
+@media all and (min-width: 630px){
+    /*Tecknet för mobil menyn döljs på desktop*/
+    label{
+    display:none;
+} 
+nav{
+    display: block;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+}
+nav a:visited{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    background-color: slategray;
+}
+nav a:active{
+    text-decoration: none;
+}
+nav li li:nth-last-of-type(1), nav li li:nth-last-of-type(1){
+    border-radius: 0px 0px 10px 10px;
+}
+nav li li:nth-last-of-type(1) a, nav li li:nth-last-of-type(1) a{
+    border-radius: 0px 0px 10px 10px;
+}
+nav ul li{
+    float: left;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    background: #3B5998;
+    text-align: center;
+}
+/* döljer undermenyn och bestämmer position */
+nav ul ul li{
+    position: relative;
+    display: none;
+    opacity: 0.9;
+    margin-left: 0px;
+}
+/* döljer underundermenyn */
+nav ul ul ul{
+    display: none;
+}
+nav ul li span{
+    background-color: slategray;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+/* tar fram menyn när man hover över */
+nav ul li:hover ul li{
+    display: block;
+}
+/* För att få till position på undermenyns undermeny  */
+nav ul ul li:hover ul{
+    display: block;
+    position: absolute;
+    width: 160px;
+    left: 160px;
+    top:0px;
+    font-size: 9pt;
+}
+/*med hjälp av adjecent sibling selector sätter vi en gröngul färg på ex2*/
+.logo h2 + h3{
+    color: #258B25;
+}
+/*kodblock nedan sätter vi en skuggfärg både som standard och en annan när man hover över*/
