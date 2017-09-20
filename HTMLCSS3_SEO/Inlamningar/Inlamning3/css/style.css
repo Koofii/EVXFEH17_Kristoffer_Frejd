@@ -140,7 +140,7 @@ aside{
 .tel ~ .web{
     color:black;
 }
-@media all and (min-width: 630px){
+@media all and (min-width: 820px){
     /*Tecknet för mobil menyn döljs på desktop*/
     label{
     display:none;
