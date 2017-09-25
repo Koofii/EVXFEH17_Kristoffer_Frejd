@@ -7,7 +7,7 @@
 /* här sätter vi en bredd på 100% samt att max breden är 800px. Vi sätter en bakgrundsfärg och centrerar innehållet*/
 body{
     width: 100%;
-    max-width: 50em;
+    max-width: 1000px;
 	background-color: #D6D3D3;
     margin: auto;
 }
@@ -51,23 +51,34 @@ nav ul ul ul li a{
 nav{
     display: none;
 }
+/* här sätter vi grundstruktur för klassen syndicate där vi tillämpar flexbox */
 .syndicate{
-    background-color: #3A3B3D;
     margin: 1em;
     box-shadow: 0px 3px 1px #5B87DF;
     display: flex;
     flex-direction: column;
     margin-bottom: 5%;
 }
+#firstarticle{
+    background-color: #6D3A3A;
+}
+#secondarticle{
+    background-color: #517497;
+}
+#thirdarticle{
+    background-color: #3F3F80
+}
 .syndicate:hover{
     background-color: #545658;
 }
+/* alla headers inom syndicateklassen sätter vi flex på samt row wrap */
 .syndicate header{
     color: whitesmoke;
     padding-top: 10px;
     display: flex;
     flex-flow: row wrap;
 }
+/* klass start och delad fördelar vi med flexbox */
 .start{
     flex: 1 100%;
     background-color: #3B5998;
@@ -92,12 +103,14 @@ nav{
     color: whitesmoke;
 }
 .syndicate footer{
-    align-content: center;
+    background-color: #5B87DF;
     color: whitesmoke;
     padding: 0.5em;
     margin-bottom: 1em;
 }
-
+.syndicate footer div{
+    text-align: center;
+}
 #na a{    
     color: black;
 }
@@ -120,6 +133,18 @@ nav{
     label{
     display:none;
 } 
+/* I de tre section nedan bestämmer vi att i desktop skall de två första artiklaran delas på samma rad (50%) samt att sista artikeln har en egen rad på 100%.
+Vi satte sista A till 100% med hjälp av last of type */
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+section a{
+    width: 50%;
+}
+section > a:last-of-type{
+    width: 100%;
+}
 nav{
     display: flex;
 }
@@ -184,8 +209,8 @@ nav ul li:hover ul li{
 nav ul ul li:hover ul{
     display: block;
     position: absolute;
-    width: 160px;
-    left: 160px;
+    width: 200px;
+    left: 200px;
     top:0px;
     font-size: 9pt;
 }
