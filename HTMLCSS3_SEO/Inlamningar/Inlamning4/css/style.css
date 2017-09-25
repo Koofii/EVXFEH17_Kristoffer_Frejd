@@ -1,0 +1,196 @@
+*{
+    font-family: 'Merriweather', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* här sätter vi en bredd på 100% samt att max breden är 800px. Vi sätter en bakgrundsfärg och centrerar innehållet*/
+body{
+    width: 100%;
+    max-width: 50em;
+	background-color: #D6D3D3;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/*kodblock nedan sätter vi vad som händer med alla länkar i menyn förutom alink som är generell*/
+a:link{
+    text-decoration: none;
+    color: white;
+}
+li{
+    list-style: none;
+}
+label{
+    color: #3B5998;
+    line-height: 40px;
+    font-size: 2em;
+    cursor: pointer;
+}
+#nav-toggle{
+    display: none;
+}
+#nav-toggle:checked + #wrapper nav{
+    display: block;
+}
+nav{
+    background-color: grey;
+}
+nav ul ul li{
+    margin-left: 20px;
+}
+nav ul ul li a{
+    color:green;
+}
+nav ul ul ul li a{
+    color: blue;
+}
+
+nav{
+    display: none;
+}
+.syndicate{
+    background-color: #3A3B3D;
+    margin: 1em;
+    box-shadow: 0px 3px 1px #5B87DF;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+.syndicate:hover{
+    background-color: #545658;
+}
+.syndicate header{
+    color: whitesmoke;
+    padding-top: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.start{
+    flex: 1 100%;
+    background-color: #3B5998;
+    font-size: 120%;
+    font-weight: 700;
+}
+.delad{
+    font-size: 120%;
+    font-weight: 700;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    background-color:#5B87DF;
+}
+.syndicate article p{
+    color: whitesmoke;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+.syndicate div{
+    padding: 0.5em;
+    color: whitesmoke;
+}
+.syndicate footer{
+    align-content: center;
+    color: whitesmoke;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+#na a{    
+    color: black;
+}
+#na a:hover{
+    color:#3B3B3B;
+}
+.contact{
+    margin-top: 0.5em;
+    text-align: center;
+}
+.tel{
+    color:black;
+}
+/*här sätter vi färgen vit med hjälp av General sibling combinator*/
+.tel ~ .web{
+    color:black;
+}
+@media all and (min-width: 816px){
+    /*Tecknet för mobil menyn döljs på desktop*/
+    label{
+    display:none;
+} 
+nav{
+    display: flex;
+}
+nav ul{
+    display: flex;
+    width: 100%;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+}
+nav a:visited{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    background-color: slategray;
+}
+nav a:active{
+    text-decoration: none;
+}
+nav li li:nth-last-of-type(1), nav li li:nth-last-of-type(1){
+    border-radius: 0px 0px 10px 10px;
+}
+nav li li:nth-last-of-type(1) a, nav li li:nth-last-of-type(1) a{
+    border-radius: 0px 0px 10px 10px;
+}
+nav ul li{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #3B5998;
+    text-align: center;
+}
+/* döljer undermenyn och bestämmer position */
+nav ul ul{
+    display: flex;
+    flex-direction: column;
+    
+}
+nav ul ul li{
+    position: relative;
+    display: none;
+    opacity: 0.95;
+    margin-left: 0px;
+}
+/* döljer underundermenyn */
+nav ul ul ul{
+    display: none;
+}
+nav ul li span{
+    background-color: slategray;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+/* tar fram menyn när man hover över */
+nav ul li:hover ul li{
+    display: block;
+}
+/* För att få till position på undermenyns undermeny  */
+nav ul ul li:hover ul{
+    display: block;
+    position: absolute;
+    width: 160px;
+    left: 160px;
+    top:0px;
+    font-size: 9pt;
+}
+/*med hjälp av adjecent sibling selector sätter vi en gröngul färg på ex2*/
+.logo h2 + h3{
+    color: #258B25;
+}
+/*kodblock nedan sätter vi en skuggfärg både som standard och en annan när man hover över*/
