@@ -1,0 +1,177 @@
+*{
+    font-family: 'Merriweather', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+	background-color: #DDD9D9;
+    margin: auto;
+}
+.minlogga{
+    text-align: center;
+}
+.maincontent{
+    display: flex;
+    flex-direction: column;
+}
+#sidebar{
+    order: 2;
+    text-align: center;
+    background-color: gray;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 20px;
+}
+#copyright{
+    background-color: gray;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 20px;
+}
+h1,h2{
+    display: inline;
+}
+a:link{
+    text-decoration: none;
+    color: whitesmoke;
+}
+a:visited{
+    color: whitesmoke;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+}
+nav li{
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+}
+nav li:first-of-type{
+    background-color: #E28801;
+}
+.two{
+    background-color: #0D67C0
+}
+.three{
+    background-color: #00C91E
+}
+.four{
+    background-color: #32BBFA
+}
+.five{
+    background-color: #C9005E
+}
+.six{
+    background-color: #140049;
+    order: -1;
+}
+.whitetext{
+    margin: 10px;
+}
+.syndicate{
+    margin: 1em;
+    box-shadow: 0px 3px 1px #5B87DF;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    background-color: #517497
+}
+#firstarticle{
+    background-color: #C9005E;
+}
+#secondarticle{
+    background-color: #E28801;
+}
+#thirdarticle{
+    background-color: #140049;
+}
+.syndicate:hover{
+    background-color: #545658;
+}
+/* alla headers inom syndicateklassen sätter vi flex på samt row wrap */
+.syndicate header{
+    color: whitesmoke;
+    padding-top: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+/* klass start och delad fördelar vi med flexbox */
+.start{
+    flex: 1 100%;
+    background-color: #3B5998;
+    font-size: 120%;
+    font-weight: 700;
+}
+.delad{
+    font-size: 120%;
+    font-weight: 700;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    background-color:#5B87DF;
+}
+.syndicate article p{
+    color: whitesmoke;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+.syndicate div{
+    padding: 0.5em;
+    color: whitesmoke;
+}
+.syndicate footer{
+    background-color: #5B87DF;
+    color: whitesmoke;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+.syndicate footer div{
+    text-align: center;
+}
+@media all and (min-width: 816px){
+    /*Tecknet för mobil menyn döljs på desktop*/
+    label{
+    display:none;
+} 
+/* I de tre section nedan bestämmer vi att i desktop skall de två första artiklaran delas på samma rad (50%) samt att sista artikeln har en egen rad på 100%.
+Vi satte sista A till 100% med hjälp av last of type */
+.six{
+    order: 0;
+}
+.maincontent{
+    display: flex;
+    flex-direction: row;
+}
+.mylogo{
+    text-align: right;
+}
+
+nav ul{
+    flex-direction: row;
+    width: 50%;
+}
+#sidebar{
+    display: flex;
+    order: 0;
+    flex-direction: column;
+    background-color: gray;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+section a{
+    width: 50%;
+}
+section > a:last-of-type{
+    width: 100%;
+}
