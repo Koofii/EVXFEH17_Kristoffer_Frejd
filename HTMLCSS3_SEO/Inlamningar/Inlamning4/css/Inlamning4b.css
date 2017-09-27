@@ -6,7 +6,7 @@
 }
 body{
     width: 100%;
-	background-color: #DDD9D9;
+	background-color: #F0EAEA;
     margin: auto;
 }
 .mylogo i{
@@ -20,6 +20,23 @@ body{
     display: flex;
     flex-direction: column;
 }
+/* nedan kodblock är för att dölja och visa menyn i mobilt läge */
+label{
+    color: black;
+    line-height: 40px;
+    font-size: 2em;
+    cursor: pointer;
+}
+header nav #menyn{
+    display: none;
+}
+#nav-toggle{
+    display: none;
+}
+#nav-toggle:checked + header nav #menyn{
+    display: flex;
+}
+/* Styling och för att visa sidebaren längre ned i mobilt läge */
 #sidebar{
     order: 2;
     text-align: center;
@@ -28,6 +45,7 @@ body{
     border-radius: 5px;
     padding: 20px;
 }
+/* Styling för copyright-rutan */
 #copyright{
     background-color: gray;
     text-align: center;
@@ -35,6 +53,7 @@ body{
     border-radius: 5px;
     padding: 20px;
 }
+/* För att generellt sätta så att h1 och h2 läggs på samma rad */
 h1,h2{
     display: inline;
 }
@@ -54,10 +73,17 @@ nav ul{
     flex-direction: column;
     width: 95%;
 }
-nav li{
+nav ul li{
     list-style: none;
     text-align: center;
+}
+nav ul li a{
+    display: block;
     padding: 10px;
+}
+nav ul li:hover a{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.27);
 }
 nav li:first-of-type{
     background-color: #E28801;
@@ -81,16 +107,19 @@ nav ul li a i{
     background-color: #140049;
     order: -1;
 }
+.six i{
+    margin-left: 5px;
+}
 .whitetext{
     margin: 15px;    
 }
 .syndicate{
     margin: 1em;
     box-shadow: 0px 3px 1px #5B87DF;
+    margin-bottom: 5%;
+    background-color: #517497;
     display: flex;
     flex-direction: column;
-    margin-bottom: 5%;
-    background-color: #517497
 }
 #firstarticle{
     background-color: #C9005E;
@@ -108,8 +137,6 @@ nav ul li a i{
 .syndicate header{
     color: whitesmoke;
     padding-top: 10px;
-    display: flex;
-    flex-flow: row wrap;
 }
 /* klass start och delad fördelar vi med flexbox */
 .start{
@@ -144,16 +171,37 @@ nav ul li a i{
 .syndicate footer div{
     text-align: center;
 }
+
+
+/* Brytpunkt för mobilt och desktop-läge */
 @media all and (min-width: 816px){
     /*Tecknet för mobil menyn döljs på desktop*/
-    label{
+
+.syndicate{
+    width: 100%;
+}
+label{
     display:none;
 } 
-/* I de tre section nedan bestämmer vi att i desktop skall de två första artiklaran delas på samma rad (50%) samt att sista artikeln har en egen rad på 100%.
-Vi satte sista A till 100% med hjälp av last of type */
+nav ul li:hover a{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.27);
+    padding: 12px;
+}
+.six a:hover{
+    padding: 10px;
+}
+
+/* för att alltid visa menyn i desktopläge */
+header nav #menyn{
+    display: flex;
+}
+/* för att återställa ordningen i meny-listan */
 .six{
     order: 0;
+    display: inline;
 }
+/* Sätter hela "kroppen" som flexbox */
 .maincontent{
     display: flex;
     flex-direction: row;
@@ -161,6 +209,8 @@ Vi satte sista A till 100% med hjälp av last of type */
 }
 .mylogo{
     text-align: right;
+    padding-top: 30px;
+    padding-right: 10px;
 }
 .minlogga{
     flex-direction: row;
@@ -175,22 +225,30 @@ nav{
 }
 nav ul{
     flex-direction: row;
-    width: 50%;
 }
+.minlogga nav ul li{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
 #sidebar{
-    max-width: 30%;
-    display: flex;
     order: 0;
     flex-direction: column;
     background-color: gray;
+    color: whitesmoke;
 }
 section{
     display: flex;
     flex-wrap: wrap;
 }
 section a{
+    display: flex;
     width: 50%;
 }
 section > a:last-of-type{
     width: 100%;
+}
+.syndicate .articletext{
+    flex-grow: 1;
+}
 }

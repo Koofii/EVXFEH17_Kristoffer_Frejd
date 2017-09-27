@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <input type="checkbox" id="nav-toggle">
     <header class="minlogga">
         <div class="huvud">
             <div class="mylogo">
@@ -20,14 +21,15 @@
                 <i class="fa fa-twitter-square" aria-hidden="true"></i>
                 <h1>| LOGO</h1> <h2>My Logo</h2>
             </div>
+            <label for="nav-toggle">&#9776 MENY</label>
             <nav>
-                <ul class="meny">
+                <ul class="meny" id="menyn">
                     <li class="one"><a href="#">One <i class="fa fa-smile-o" aria-hidden="true"></i></a></li>
                     <li class="two"><a href="#">Two <i class="fa fa-cutlery" aria-hidden="true"></i></a></li>
                     <li class="three"><a href="#">Three <i class="fa fa-eye" aria-hidden="true"></i></a></li>
                     <li class="four"><a href="#">Four <i class="fa fa-wheelchair" aria-hidden="true"></i></a></li>
                     <li class="five"><a href="#">Five <i class="fa fa-fighter-jet" aria-hidden="true"></i></a></li>
-                    <li class="six"><a href="#">Searchbar</a></li>
+                    <li class="six"><a href="#"><form action="/action_page.php"><input type="text" name="Search"><input type="submit" value="Submit"><i class="fa fa-search"></i></form></a></li>
                 </ul>
              </nav>
         </div>
@@ -59,12 +61,12 @@
                             <div><i class="fa fa-envelope"></i> Kristoffer Frejd</div>
                     </div>
                 </header>
-                    <div>
+                    <div class="articletext">
                         <picture>
                             <img src="images/random2.gif" height="150" width="150">
                         </picture>
                         <p>
-                            Den flygande musen sprutar eld. Men åt fel håll.
+                            Den flygande musen sprutar eld. Men åt fel håll. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto explicabo expedita quas aspernatur rem impedit ratione doloremque laborum necessitatibus, repellat reprehenderit, voluptatem exercitationem odio obcaecati deserunt asperiores, harum at eaque! Repellat aspernatur voluptate alias maxime labore, eveniet officia at, nulla soluta ratione enim explicabo, animi dolore veritatis beatae inventore cum.
                         </p>
                     </div>
                     <footer>
@@ -83,12 +85,12 @@
                                 <div><i class="fa fa-envelope"></i> Kristoffer Frejd</div>
                             </div>
                         </header>
-                    <div>
+                    <div class="articletext">
                         <picture>
                             <img src="images/random1.png" height="150" width="150">
                         </picture>
                         <p>
-                            Den gröna mannen citerar ifrån skuggorna
+                            Den gröna mannen citerar ifrån skuggorna. 
                         </p>
                     </div>
                     <footer>
@@ -107,7 +109,7 @@
                                 <div><i class="fa fa-envelope"></i> Kristoffer Frejd</div>
                             </div>
                         </header>
-                    <div>
+                    <div class="articletext">
                         <picture>
                             <img src="images/random3.png" height="150" width="150">
                         </picture>
@@ -117,13 +119,13 @@
                         </p>
                     </div>
                     <footer>
-                    <div>
-                        <i class="fa fa-university"></i>
-                        <i class="fa fa-university"></i>
-                        <i class="fa fa-university"></i>
-                    </div>                      
-                 </footer>
-            </article></a>
+                        <div>
+                            <i class="fa fa-university"></i>
+                            <i class="fa fa-university"></i>
+                            <i class="fa fa-university"></i>
+                        </div>                      
+                    </footer>
+                </article></a>
             <div class="whitetext">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique explicabo dicta cum obcaecati, corrupti unde quasi tempore iusto deserunt autem?</p>
             </div>
