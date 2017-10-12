@@ -10,55 +10,64 @@ body{
 figure{
     margin: 0;
 }
+/* sätter att alla listor inte ska ha någon styling */
 li{
     list-style: none;
 }
+/* att imgages skall ha 100width o auto på height */
 img {
 	width: 100%;
 	height: auto;
 }
-
+/* länkar ska inte ha någon textdecoation och ha vit färg. */
 a{
     text-decoration: none;
-    color: whitesmoke;
+    color: #F0EBEB;
 }
+/* här sätter vi så att cursorna ska ha en pointer när man hover samt ändra lite annan styling */
 label{
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     position: fixed;
+    padding-right: 5px;
+    background-color: rgba(245, 245, 245, 0.63);
 }
 .logo{
     text-align: center;
+
 }
+/* Här positionerar vi menyn i mobilt och tablet-läge. Kodning är också för att få den i animation. */
 #meny{
     position: fixed;
     text-align: left;
-    margin-top: 30px;
+    margin-top: 40px;
     left: -500px;
     height: 100%;
     overflow: auto;
     padding-bottom: 100px;
-    background-color: #3B5998;
     animation-name: hidemenu;
     animation-duration: 0.7s;
+    background-color: #1DA1F2;
 }
 #nav-toggle:checked + header #meny{
     display: block;
     position: fixed;
     left: 0;
-    width: 120px;
-    margin-top: 30px;
+    width: 150px;
+    margin-top: 40px;
     animation-name: showmenu;
     animation-duration: 0.7s;
 }
+/* Animation för meny */
 @keyframes showmenu{
-    0% {left:-500px;}
+    0% {left:-500px;}   
     100% {left: 0px;}
 }
 @keyframes hidemenu{
     0%{left: 0px;}
     100%{left:-500px;}
 }
+/* finjustering utav menyn */
 #meny ul{
     padding-left: 5px;
     text-align: left;
@@ -79,6 +88,7 @@ label{
 #digital{
     display: block;
 }
+/* lite styling för alla "artiklar" i kodblock under */
 .main-content{
     margin: 0 auto;
     margin-top: 40px;
@@ -95,8 +105,38 @@ label{
     flex-direction: column;
     color: black;
 }
-
+footer{
+    margin-top: 20px;
+    max-width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+/* här stylar vi vår footer med olika margins och olika färger för våra icons som vi hämtat ifrån awesomefont */
+footer div{
+    margin: 10px;
+}
+footer div span{
+    font-size: 14px;
+    font-style: italic;
+}
+.icons i{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+}
+.icons i:nth-child(1), .icons i:nth-child(2){
+    color: #3B5998;
+}
+.icons i:nth-child(3){
+    color: #BD081C;
+}
+.icons i:nth-child(4){
+    color: #1DA1F2;
+}
+/* nedan media query är för tablet */
 @media screen and (min-width: 432px){
+    /* här sätter vi 2 kolumner plus 4 rader och en gridgap på 10px */
     .main-content{
         display: grid;
         grid-template-columns: 13em 13em;
@@ -104,11 +144,30 @@ label{
         grid-gap: 10px;
         max-width: 27em;
     }
+    /* Nedan sätter vi positionen för de olika "artiklarna" */
+    .artiklar:nth-child(1){
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .artiklar:nth-child(3){
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .artiklar:nth-child(5){
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    .artiklar:nth-child(6){
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
 }
+/* här har vi media query för desktop-läge */
 @media screen and (min-width: 1040px){
     *{
         margin: 0;
     }
+    /* Meny i samband med logo tillämpar vi flex */
     header{
         display: flex;
         flex-direction: row;
@@ -125,8 +184,7 @@ label{
     a{
         color: black;
     }
-
-
+/* i meny tillämpar vi flex med en space-around */
     #meny{
         overflow: initial;
         position: static;
@@ -135,6 +193,7 @@ label{
         background-color: rgba(0, 0, 0, 0);
         margin-bottom: 65px;
     }
+    /* Här tillämpar vi också flex och sätter att widthen ska vara 100% samt nollställer all margin o padding */
     #meny ul{
         display: flex;
         width: 100%;
@@ -143,6 +202,7 @@ label{
 
 
     }
+    /* Lite basic styling för att få den snygg */
     #meny ul li{
         width: 100%;
         height: 40px;
@@ -151,11 +211,12 @@ label{
         background-color: rgba(161, 236, 255, 0);
         
     }
+    /* här sätter vi så att ul ul skall tillämpas i column */
     #meny ul ul{
-        display: flex;
         flex-direction: column;
         width: 60px;
     }
+    /* vi sätter lista för undermenyn till relative samt att den inte skall visas per automatik */
     #meny ul ul li{
         position: relative;
         display: none;
@@ -170,14 +231,17 @@ label{
         font-size: 15px;
         
     }
+    /* lite text-styling för när man hover över meny */
     #meny ul li a:hover{
         color: rgb(29, 161, 242);
         padding: 0;
         margin: 0;
     }
+    /* här tar vi fram undermenyn när man hover över menyn */
     #meny ul li:hover ul li{
         display: block;
     }
+    /* här tar vi fram menyn när man hover över undermenyn */
     #meny ul ul li:hover ul{
         display: block;
         position: absolute;
@@ -185,19 +249,23 @@ label{
         left: 100%;
         padding: 0;
     }
-
+/* här tillämpar vi grid för att kunna justera placering i vår maincontent */
     .main-content{
         display: grid;
-        grid-template-columns: 1fr repeat(4, 1fr);
-        grid-template-areas: 1fr 1fr 1fr;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
         max-width: 70%;
     }
+    /* lite styling-effekter när man hover över korten. */
     .artiklar{
         transition: .5s;
+        opacity: 0.7;
     }
     .artiklar:hover{
-        box-shadow: 3px 5px 3px #888888;
+        box-shadow: 1px 1px 1px #888888;
+        opacity: 1;
     }
+    /* nedan placerar vi ut våra griditems */
     .artiklar:nth-child(1){
         grid-column: 1/3;
         grid-row: 3/4;
