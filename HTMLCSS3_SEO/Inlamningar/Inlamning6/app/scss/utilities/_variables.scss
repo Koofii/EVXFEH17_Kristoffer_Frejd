@@ -1,0 +1,26 @@
+//Variabler
+
+// Variabler för olika färger 
+
+$colordesktop: #3B5998;
+$colortablet: #1DA1F2;
+$colormobile: #b9afaf;
+$colorsubmenu: orange;
+
+// maps för breakpoints
+$breakpoints:(
+    'mobile': (max-width:431px),
+    'tablet': (min-width: 432px),
+    'desktop': (min-width: 1350px),
+    'mobiletablet': (max-width: 1349px),
+) !default;
+
+// colormap
+$colors:
+(
+    main: #000000,
+    artiklar: #e9dcdc,
+    header: #af8686,
+    submenu: #6d6ecc,
+    submenu2: orange,
+) !default;

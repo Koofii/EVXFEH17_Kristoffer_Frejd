@@ -1,0 +1,24 @@
+.artiklar{
+    @extend %artiklar;
+    transition: .5s;
+    margin: 10px;
+}
+// Här sätter vi grid för tablet med 2 kolumner och 3 rader.
+@include respond-to('tablet'){
+    .maincontent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 15px;
+    }
+}
+// Här sätter vi grid på desktop med 3 kolumner och 2 rader
+@include respond-to('desktop'){
+    .maincontent{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 15px;
+    }
+}

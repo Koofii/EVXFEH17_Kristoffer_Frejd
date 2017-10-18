@@ -1,0 +1,15 @@
+label{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+// Sätter en font-size på label men i desktop-läge döljer vi den.
+
+label{
+    font-size: 25px;
+    @include respond-to(desktop){
+     display: none;   
+    }
+}

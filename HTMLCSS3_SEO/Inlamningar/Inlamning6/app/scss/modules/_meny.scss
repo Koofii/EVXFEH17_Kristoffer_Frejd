@@ -1,0 +1,22 @@
+#nav-toggle{
+    display: none;
+}
+
+// Hur menyn ska reagera på olika breakpoints
+#nav ul{
+    // display: none;
+    background-color: $colormobile;
+
+
+    @include respond-to('tablet'){
+        display: block;
+        background-color: $colortablet;
+    }
+    @include respond-to('desktop'){
+        display: block;
+        
+        justify-content: center;
+        background-color: $colordesktop;
+        
+    }
+}

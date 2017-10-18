@@ -1,0 +1,95 @@
+li{
+    list-style: none;
+}
+
+// Här bygger vi menyn för mobil och tablet-brytpunkterna.
+@include respond-to('mobiletablet'){
+#nav{
+    position: fixed;
+    text-align: left;
+    left: -500px;
+    height: 100%;
+    overflow: auto;
+    animation-name: hidemenu;
+    animation-duration: 0.7s;
+    
+}
+#nav-toggle:checked + header #nav{
+    display: block;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    animation-name: showmenu;
+    animation-duration: 0.7s;
+}
+/* Animation för meny */
+@keyframes showmenu{
+    0% {left:-1600px;}   
+    100% {left: 0px;}
+}
+@keyframes hidemenu{
+    0%{left: 0px;}
+    100%{left:-1600px;}
+}
+
+.submenu, .submenu2{
+    font-size: 25px;
+    background-color: $colorsubmenu;
+}
+.submenu-small{
+    @extend .submenu;
+    font-size: 20px;
+
+}
+#nav ul h4{
+    font-size: 17px;
+}
+#nav ul ul li{
+    font-size: 15px;
+}
+#hem{
+    font-size: 30px;
+}
+}
+@include respond-to('desktop'){
+
+    .megamenu li{
+        display: none;
+    }
+    #nav ul{
+        display: flex;
+        flex-wrap: row wrap;
+        position: absolute;
+        width: 100%;
+
+        & li{
+            font-size: 20px;
+            padding: 10px;
+            & a{
+                color: whitesmoke;
+            }
+
+            &:hover .megamenu li{
+                display: block;
+            }
+            & .megamenu{
+                left: 0;
+                padding-top: 15px;
+                 ul{
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    justify-content: flex-start;
+
+                     li{
+                        color: whitesmoke;
+                        font-size: 16px;
+                        & a{
+                            color: whitesmoke;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

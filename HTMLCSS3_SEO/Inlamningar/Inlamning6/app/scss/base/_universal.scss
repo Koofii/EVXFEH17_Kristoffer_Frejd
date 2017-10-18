@@ -1,0 +1,27 @@
+// Generell kod
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+figure{
+    margin: 0;
+}
+body{
+    width: 90%;
+    margin: 0 auto;
+
+    @include respond-to('desktop'){
+        width: 100%;
+        
+    }
+    @include respond-to('tablet'){
+        width: 100%;
+    }
+}
