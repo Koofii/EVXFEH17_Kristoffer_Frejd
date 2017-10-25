@@ -1,0 +1,13 @@
+@mixin box( $radius, $shadowColor, $grad1, $grad2, $hover){
+
+    border-radius: $radius;
+
+    box-shadow: 0 5px 10px $shadowColor;
+
+    background-color: #036;
+    background: linear-gradient($grad1, $grad2);
+
+    &:hover{
+        background: $hover;
+    }
+}

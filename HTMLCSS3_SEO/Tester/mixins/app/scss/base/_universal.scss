@@ -1,0 +1,22 @@
+*{
+    font-family: 'Merriweather Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    background: #c69;
+}
+.container{
+    width: 768px;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+    background: white;
+}

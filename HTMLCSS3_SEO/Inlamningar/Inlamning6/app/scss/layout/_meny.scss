@@ -51,6 +51,7 @@ li{
     font-size: 30px;
 }
 }
+// här har vi brytpunkt för desktop där vi designar menyn
 @include respond-to('desktop'){
 
     .megamenu li{
