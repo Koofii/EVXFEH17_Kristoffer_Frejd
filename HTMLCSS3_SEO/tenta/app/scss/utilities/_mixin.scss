@@ -14,10 +14,11 @@
 
 
 //för VG-uppgift
+//En mixin för att skapa cirkel
 @mixin create($border){
     border-radius: $border;
 }
-
+//mixin för att ta in färg på cirkel, margin och transition
 @mixin style($color, $margin, $trans){
     @extend %button;
     background-color: $color;
@@ -25,7 +26,7 @@
     transition: $trans;
 
     &:hover{
-        background-color: lighten($color: $color, $amount: 18%);
+        background-color: lighten($color: $color, $amount: 18%); //SASS-kod för att göra färgen ljusare
     }
     &:active{
         background-color: lighten($color: $color, $amount: 25%);
