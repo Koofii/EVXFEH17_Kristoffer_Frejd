@@ -11,3 +11,23 @@
         }
     }
 }
+
+
+//för VG-uppgift
+@mixin create($border){
+    border-radius: $border;
+}
+
+@mixin style($color, $margin, $trans){
+    @extend %button;
+    background-color: $color;
+    margin-right: $margin;
+    transition: $trans;
+
+    &:hover{
+        background-color: lighten($color: $color, $amount: 18%);
+    }
+    &:active{
+        background-color: lighten($color: $color, $amount: 25%);
+    }
+}

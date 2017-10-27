@@ -1,13 +1,16 @@
-@mixin box( $radius, $shadowColor, $grad1, $grad2, $hover){
-
+@mixin box( $radius, $size, $shadowColor, $grad1, $grad2, $hover, $hover1, $display:flex, $justify:center){
     border-radius: $radius;
-
+    display: $display;
+    width: $size;
+    height: $size;
+    justify-content: $justify;
+    align-items: $justify;
     box-shadow: 0 5px 10px $shadowColor;
-
-    background-color: #036;
     background: linear-gradient($grad1, $grad2);
-
+    filter: grayscale(100%);
+    
     &:hover{
-        background: $hover;
+        background:linear-gradient($hover, $hover1);
+        filter: grayscale(0)
     }
 }

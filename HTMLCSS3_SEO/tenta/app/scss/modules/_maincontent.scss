@@ -1,0 +1,76 @@
+//simpel styling för vårt portfolio med hoverffekt
+.main-content{
+    min-height: 100vh;
+    margin-bottom: 1em;
+}
+.portfolio-item{
+    z-index: 10;
+    padding: 1em;
+    transition: 300ms;
+    font-size: 25px;
+    margin-bottom: 1em;
+    background-color: $cards;
+    color: $cardcolor;
+    &:hover{
+        color: $cardhover;
+        box-shadow: 1px 1px 1px grey;
+    }
+}
+//hur vår maincontent ska stylas för desktop
+@include respond-to('desktop'){
+    .main-content{
+        min-height: 0;
+        margin-bottom: 0;
+    }
+    //tillämpa grid
+    .main-content .portfolio{
+        padding-top: 10px;
+        min-height: 0;
+        margin-bottom: 0;
+        display: grid;
+        grid-gap: 20px;
+        grid-template: repeat(8, 1fr) / repeat(5, 1fr); 
+        background-color: $background;
+
+        .small{
+            grid-column: span 1;
+            padding: 0;
+            margin: 0;
+        }
+
+        .medium{
+            grid-column: span 2;
+            grid-row: span 2;
+            padding: 0;
+            margin: 0;
+        }
+        //för att få till bilden på ett snyggt sätt COVER WOHOO!!
+        .large{
+            z-index: 1;
+            transition: 300ms;
+            padding: 0;
+            grid-column: 3/6 ;
+            grid-row: span 3;
+            opacity: 0.8;
+            background: url("../images/bild1.jpg");
+            background-size: 100% 100%;
+            width: 100%;
+            min-height: 350px;
+
+            &:hover{
+                opacity: 1.0;
+            }
+        }
+        .tall{
+            grid-column: span 2;
+            grid-row: span 3;
+            padding: 0;
+            margin: 0;
+        }
+        .wide{
+            grid-column: span 3;
+            grid-row: span 2;
+            margin: 0;
+        }
+    }
+}

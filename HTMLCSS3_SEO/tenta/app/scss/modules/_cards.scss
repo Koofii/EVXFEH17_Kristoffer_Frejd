@@ -1,0 +1,68 @@
+//här tillämpar vi flex för att centerar texten samt lägger vi till en bakgrundsbild som centreras
+.hero{
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+    background-image: url("../images/portree.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+
+    & h1{
+        text-align: center;
+    }
+    //Hur den ska bete sig på desktop
+    @include respond-to('desktop'){
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 30px;
+        background-position: center;
+        
+    }
+}
+//simpel styling för våra cards
+.card{
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .card-content h1{
+        font-size: 1em;
+        display: inline;
+        font-weight: normal;
+    }
+}
+
+//brytpunkt för desktop
+@include respond-to('desktop'){
+    //här tillämpar vi grid med areas
+    .card{
+        @extend %cards;
+        grid-template-areas: 
+        "img title"
+        "img content";
+        padding: 1.5em;
+        margin-bottom: 1.5em;
+        box-shadow: 2px 2px 2px 2px #888888;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .card-image{
+        grid-area: img;
+
+    }
+    .card-title{
+        grid-area: title;
+
+    }
+    .card-content{
+        grid-area: content;
+
+    }
+}

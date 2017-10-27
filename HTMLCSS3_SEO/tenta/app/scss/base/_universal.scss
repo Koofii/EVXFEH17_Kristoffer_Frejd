@@ -1,27 +1,14 @@
 *{
-    font-family: 'Merriweather Sans', sans-serif;
-    box-sizing: border-box;
+    font-family: 'Merriweather', serif; //font familj som skall användas
     margin: 0 auto;
+    padding: 0;
 }
 li{
     list-style: none;
 }
-a{
-    text-decoration: none;
-    color: black;
-}
-figure{
-    margin: 0;
-}
 body{
-    width: 90%;
+    display: block;
     margin: 0 auto;
-
-    @include respond-to('desktop'){
-        width: 100%;
-        
-    }
-    @include respond-to('tablet'){
-        width: 100%;
-    }
+    padding: 0;
+    background-color: $background;
 }

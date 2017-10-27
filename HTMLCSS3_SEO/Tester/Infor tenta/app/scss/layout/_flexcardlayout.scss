@@ -1,0 +1,14 @@
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+section a{
+    display: flex;
+    width: 50%;
+}
+section > a:last-of-type{
+    width: 100%;
+}
+.syndicate .articletext{
+    flex-grow: 1;
+}

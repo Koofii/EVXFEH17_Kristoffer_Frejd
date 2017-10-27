@@ -1,0 +1,33 @@
+@include respond-to('desktop'){
+
+    //här tillämpar vi grid för area med hjälp av shorthand.
+    body{
+        display: grid;
+        grid-template: auto / 1fr minmax(30em, 5fr) 1fr minmax(10em, 1fr); //shorthand med minmax
+        grid-gap: 1.5em;
+        grid-template-areas: 
+        "header header header header"
+        "hero hero hero hero"
+        ". main sidebar ."
+        "footer footer footer footer"
+    }
+    .header-title{
+        grid-area: header;
+    }
+    .hero{
+        grid-area: hero;
+        background-color: $cards;
+        width: 100%;
+    }
+    .main{
+        grid-area: main;
+        background-color: $cards;
+    }
+    .sidebar{
+        grid-area: sidebar;
+        background-color: $cards;
+    }
+    .footer{
+        grid-area: footer;
+    }
+}

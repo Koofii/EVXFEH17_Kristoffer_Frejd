@@ -1,0 +1,44 @@
+.vg{
+    background: white;
+    display: flex;
+
+}
+
+.container{
+    width: auto;
+    height: 100vh;
+    @extend %container;
+}
+
+.red-circle{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(0.8);
+    @include create(50%);
+    @include style(red, 10px, 300ms);
+}
+
+.blue-circle{
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(0.8);
+    @include create(50%);
+    @include style(blue, 10px, 300ms);
+}
+
+.green-circle{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(0.8);
+    @include create(50%);
+    @include style(green, 10px, 300ms);
+}

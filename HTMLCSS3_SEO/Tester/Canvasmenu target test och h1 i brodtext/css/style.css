@@ -1,0 +1,47 @@
+.container{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+nav ul{
+    
+    
+}
+.toggle{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #136fd2;
+    padding: 20px;
+}
+#nav{
+    transition: transform .3s ease-in-out;
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    position: fixed;
+    width: 300px;
+    background-color: #136fd2;
+    left: -340px;
+}
+#nav:target{
+    transform: translateX(340px);
+}
+.close {
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    font-size: 3em;
+    position: relative;
+    top: -20px;
+    
+}
+.text h1{
+    display: inline;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: normal;
+}

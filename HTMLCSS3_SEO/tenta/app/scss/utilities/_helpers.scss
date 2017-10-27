@@ -1,11 +1,26 @@
-@include respond-to('mobiletablet'){
-    %naven{
-        position: fixed; //Position är fixed för att menyn skall ligga fast på vänster sida.
-        text-align: left;
-        left: -500px; //Detta är för "dölja" menyn för animation
-        height: 100%;
-        overflow: auto;
-        animation-name: hidemenu; //döper animationen för att dölja menyn
-        animation-duration: 0.7s;
+
+//placeholder för kort
+@include respond-to('desktop'){
+    %cards{
+        display: grid;
+        grid-gap: 1.5em;
+        grid-template: 10% 90% / 1fr 3fr;
+        background-color: whitesmoke;
+        box-shadow: 2px 2px 2px grey;
     }
+}
+
+
+%button{
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+    padding: 1%;
+    font-size: 1.5em;
+}
+
+%container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

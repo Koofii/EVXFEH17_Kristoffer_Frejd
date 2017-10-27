@@ -9,18 +9,16 @@ $menytext: #0f0f0f;
 $colordesktop: rgb(219, 219, 219);
 $colortablet: #1DA1F2;
 $colormobile: #b9afaf;
-$cardcolor: orange;
-$cardhover: white;
+$colorsubmenu: orange;
+$colormenu: #d3d0d0;
 $menudesktoptext: black;
-$cards: rgb(94, 94, 94);
-$background: rgb(163, 119, 243);
 
 // maps för breakpoints
 $breakpoints:(
-    'mobile': (max-width:1167px),
+    'mobile': (max-width:431px),
     'tablet': (min-width: 432px),
-    'desktop': (min-width: 1168px),
-    
+    'desktop': (min-width: 1030px),
+    'mobiletablet': (max-width: 1029px),
 ) !default;
 
 // colormap

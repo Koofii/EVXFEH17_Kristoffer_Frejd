@@ -1,7 +1,7 @@
 // FALLBACK MOBILE
 @include respond-to('mobile'){
     
-    .content a{
+    .content{
         display: flex;
         flex-direction: column;
         

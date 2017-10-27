@@ -1,0 +1,94 @@
+.container{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-gap:10px;
+}
+
+.container > *{
+  color: #353535;
+  font-size: 1.2em;
+  line-height: 1.5;
+  padding: 20px;
+  background: #d0cfc5;
+}
+
+/*nav styles*/
+.container nav{
+  background: #136fd2;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav a{
+    color: #d0cfc5
+}
+nav a:hover{
+    text-decoration:none;
+}
+@media only screen and (min-width:600px){
+    
+    /*grid*/
+    .container{
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /*grid items*/
+    .container header, .container nav, .container footer{
+      grid-column: span 4;
+    }
+    
+    .container section{
+      grid-column: span 3;
+    }
+    
+    /*display menu with flex*/
+    nav ul{
+      display:flex;
+      justify-content:center;
+    }
+    
+    nav ul li{
+      padding: 0 20px 0 0;
+    }
+    
+    .toggle{
+      display:none;
+    }
+  }
+  
+  @media only screen and (max-width:599px){
+    /*off-canvas menu*/
+    .toggle{
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: 20px;
+        background-color: #136fd2;
+        padding: 20px;
+    }
+    #nav{
+        transition: transform .3s ease-in-out;
+        top: 0;
+        bottom: 0;   
+        min-height: 100vh; /* override Safari bug */
+        position: fixed; /* or choose `absolute` depending on desired behavior*/
+        width: 300px;
+        left: -340px; /*lägg menyn utanför skärmen -340px*/
+    }
+    
+    /*URL-adresser med en # följd av en ankare med namnlänk till ett visst element i ett dokument. Elementet som är länkas till är själva målelementet.
+    */
+      #nav:target {     
+        transform: translateX(340px);
+      }
+    
+      .close {
+        text-align: right;
+        display: block;
+        text-decoration: none;
+        font-size: 3em;
+        position: relative;
+        top: -30px;
+      }    
+  }
