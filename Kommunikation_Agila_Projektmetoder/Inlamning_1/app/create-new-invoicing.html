@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/print.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo-all">
+            <div class="logo-slogan">
+                Välkommen till friheten ni längtat efter!
+            </div>
+            <div class="logo-meny">
+                <a href="index.html">KOOFNOX</a>
+                <p>Här bokför riktiga hjältar</p>
+            </div>
+        </div>
+        <nav class="nav-software">
+            <ul>
+                <li><a href="book-keeping.html">Bokföring</a></li>
+                <li><a href="invoicing.html">Fakturering</a></li>
+                <li><a href="reports.html">Rapporter</a></li>
+            </ul>
+        </nav>
+    </nav>
+    <section>
+        <div class="create-new">
+            <a href="invoicing.html" class="button">Visa Lista</a>
+        </div>
+    </section>
+    <div class="customer-info">
+        <p>
+            Vilken kund skall faktureras?
+        </p>
+        <div class="what-customer">
+            <select>
+                <option value="JE">Jonas Eriksson</option>
+                <option value="KF">Kristoffer Frejd</option>
+                <option value="RS">Robert Sjöblom</option>
+                <option value="SD">Simon Dyhr</option>
+                <option value="JS">Johan Samuelsson</option>
+                <option value="AL">Anton Lundin</option>
+                <option value="JF">Jens Franzon</option>
+            </select>
+        </div>
+    </div>
+    <div id="inv-mobile">
+        <input type="text" id="Artikel" name="firstname" placeholder="Artikel">
+        <input type="text" id="Beskrivning" name="firstname" placeholder="Beskrivning">
+        <input type="text" id="Moms" name="firstname" placeholder="Moms">
+        <input type="text" id="Nettobelopp" name="firstname" placeholder="A-pris">
+    </div>
+    <table id="inv-desktop">
+        <tr>
+          <th>Artikelnr.</th>
+          <th>Beskrivning</th>
+          <th>Moms</th>
+          <th>Nettobelopp</th>
+        </tr>
+        <tr>
+          <td><input type="text" id="Artikel" name="firstname" placeholder="Artikel"></td>
+          <td><input type="text" id="Beskrivning" name="firstname" placeholder="Beskrivning"></td>
+          <td><input type="text" id="Moms" name="firstname" placeholder="Moms"></td>
+          <td><input type="text" id="Nettobelopp" name="firstname" placeholder="A-pris"></td>
+        </tr>
+        <tr>
+          <td><input type="text" id="Artikel" name="firstname" placeholder="Artikel"></td>
+          <td><input type="text" id="Beskrivning" name="firstname" placeholder="Beskrivning"></td>
+          <td><input type="text" id="Moms" name="firstname" placeholder="Moms"></td>
+          <td><input type="text" id="Nettobelopp" name="firstname" placeholder="A-pris"></td>
+        </tr>
+    </table>
+    <div class="send-invoice">
+        <a href="#" class="button">Skicka som E-faktura</a>
+        <a href="#" class="button">Skicka via E-post</a>
+    </div>
+    <footer>
+        <div class="footer">
+            Adress: <br>
+            Frövägen 20a <br>
+            352 41 Växjö <br>
+            Sweden
+        </div>
+        <div class="footer">
+            "Knowing what you want, helps you focus on what you need to do"<br>
+            "We all want the results but not everyone wants to work"<br>
+            "Life is not a problem to be solved, but a reality to be experienced"
+        </div>
+        <div class="footer">
+            Kontakta oss: <br>
+            Telefon: 070 - 509 81 02 <br>
+            Mejl: info@info.se <br>
+            Går även att skicka Post 
+        </div>
+    </footer>
+</body>
+</html>

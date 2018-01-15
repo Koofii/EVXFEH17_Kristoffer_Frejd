@@ -1,0 +1,86 @@
+
+
+#intro{
+    margin-top: 20vh;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+.link-buttons{
+    text-align: center;
+    margin-top: 7em;
+    & a{
+        display: block;
+        text-align: center;
+        margin: 30px;
+        color: black;
+        background-color: rgb(175, 175, 175);
+        border-radius: 10px;
+        padding: 15px 32px;
+        font-size: 20px;
+
+        @include respond-to('medium'){
+            margin: 50px;
+            display: inline-block;
+        }
+    }
+}
+
+    .logo-all{
+        background-color: map-get($colors, main );
+        @include respond-to('medium'){
+            background-color: map-get($colors, main );
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    .logo-slogan{
+        font-size: 15px;
+        color: map-get($colors, bright );
+        text-align: center;
+
+        @include respond-to('medium'){
+            color: white;
+            font-size: 20px;
+            margin-left: 50px;
+            padding: 50px 0px 20px 0px;
+            width: 50%;
+            text-align: left;
+        }
+    }
+
+    .logo-meny{
+        text-align: center;
+        color: map-get($colors, bright);
+        padding: 10px;
+        & a{
+            color: white;
+            font-size: 40px;
+        }
+    }
+    @include respond-to('medium'){
+    .logo-meny{
+        text-align: right;
+        padding: 20px 0px 20px 0px;
+        width: 50%;
+        margin-right: 50px;
+        & a{
+            color: map-get($colors, bright);
+            font-size: 60px;
+            font-weight: bold;
+
+        }
+        & p{
+            color: map-get($colors, bright);
+            margin-right: 50px;
+        }
+    }
+}
+
+    #logo{
+        text-align: center;
+        color: map-get($colors, bright);
+        font-size: 70px;
+    }

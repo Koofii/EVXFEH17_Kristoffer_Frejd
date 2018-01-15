@@ -1,0 +1,234 @@
+/* sass breakpoint mixin */
+.button {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 3px; }
+
+body {
+  margin: 0 auto;
+  padding: 0; }
+
+.background-image {
+  background-image: url("../images/background-image1.jpeg");
+  background-size: cover; }
+
+li {
+  list-style: none;
+  text-decoration: none; }
+
+a {
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 0; }
+
+* {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin: 0 auto;
+  padding: 0; }
+
+.nav-software {
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  background-color: white;
+  border-bottom: 1px solid #c7c7c7; }
+  .nav-software ul {
+    margin-left: 35px; }
+    .nav-software ul li {
+      display: inline-block;
+      margin: 0px 15px 0px 15px; }
+      @media (max-width: 45em) {
+        .nav-software ul li {
+          display: block;
+          text-align: center;
+          margin: 5px 0px 5px 0px; } }
+      .nav-software ul li a {
+        color: #333;
+        font-size: 20px; }
+        @media (max-width: 45em) {
+          .nav-software ul li a {
+            font-size: 25px; } }
+
+table {
+  border-collapse: collapse;
+  width: 95%;
+  margin-top: 50px; }
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px; }
+  @media (max-width: 45em) {
+    td:nth-child(3), th:nth-child(3) {
+      display: none; }
+    td:nth-child(4), th:nth-child(4) {
+      display: none; } }
+
+tr:nth-child(even) {
+  background-color: #dddddd; }
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 12px;
+  box-sizing: border-box; }
+
+select {
+  width: 100%;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: white; }
+
+.customer-info {
+  width: 95%; }
+  .customer-info p {
+    font-size: 20px;
+    text-align: center; }
+
+.what-customer {
+  width: 20%;
+  margin-top: 20px; }
+  @media (max-width: 45em) {
+    .what-customer {
+      width: 100%; } }
+
+#inv-mobile {
+  margin-top: 10px;
+  width: 95%; }
+  #inv-mobile input {
+    margin-top: 10px; }
+  @media (min-width: 45em) {
+    #inv-mobile {
+      display: none; } }
+
+@media (max-width: 45em) {
+  #inv-desktop {
+    display: none; } }
+
+div figure {
+  margin-top: 50px; }
+  div figure img {
+    display: block;
+    margin: auto;
+    width: 50%; }
+
+.create-new {
+  margin-top: 50px;
+  width: 90%;
+  text-align: right;
+  margin-right: 50px; }
+  @media (max-width: 45em) {
+    .create-new {
+      text-align: center;
+      margin-right: 10px; } }
+
+.send-invoice {
+  text-align: center;
+  margin-top: 30px;
+  width: 95%; }
+  @media (min-width: 45em) {
+    .send-invoice {
+      text-align: right; } }
+
+.rapporter {
+  margin-top: 15px;
+  text-align: right;
+  width: 95%; }
+
+#intro {
+  margin-top: 20vh;
+  text-align: center;
+  color: white;
+  font-size: 50px; }
+
+.link-buttons {
+  text-align: center;
+  margin-top: 7em; }
+  .link-buttons a {
+    display: block;
+    text-align: center;
+    margin: 30px;
+    color: black;
+    background-color: #afafaf;
+    border-radius: 10px;
+    padding: 15px 32px;
+    font-size: 20px; }
+    @media (min-width: 45em) {
+      .link-buttons a {
+        margin: 50px;
+        display: inline-block; } }
+
+.logo-all {
+  background-color: #333; }
+  @media (min-width: 45em) {
+    .logo-all {
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      width: 100%; } }
+
+.logo-slogan {
+  font-size: 15px;
+  color: white;
+  text-align: center; }
+  @media (min-width: 45em) {
+    .logo-slogan {
+      color: white;
+      font-size: 20px;
+      margin-left: 50px;
+      padding: 50px 0px 20px 0px;
+      width: 50%;
+      text-align: left; } }
+
+.logo-meny {
+  text-align: center;
+  color: white;
+  padding: 10px; }
+  .logo-meny a {
+    color: white;
+    font-size: 40px; }
+
+@media (min-width: 45em) {
+  .logo-meny {
+    text-align: right;
+    padding: 20px 0px 20px 0px;
+    width: 50%;
+    margin-right: 50px; }
+    .logo-meny a {
+      color: white;
+      font-size: 60px;
+      font-weight: bold; }
+    .logo-meny p {
+      color: white;
+      margin-right: 50px; } }
+
+#logo {
+  text-align: center;
+  color: white;
+  font-size: 70px; }
+
+footer {
+  background-color: #333;
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+  height: 40vh; }
+  @media (min-width: 45em) {
+    footer {
+      display: flex;
+      margin-top: 120px;
+      background-color: #333;
+      height: 30vh;
+      width: 100%; }
+      footer div {
+        color: white;
+        font-size: 20px;
+        text-align: center; } }
+
+.footer {
+  padding-top: 30px; }
