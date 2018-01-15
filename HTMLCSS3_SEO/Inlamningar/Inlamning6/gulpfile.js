@@ -9,6 +9,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
+var louis = require('gulp-louis');
 
 // Basic Gulp task syntax
 gulp.task('hello', function() {
@@ -82,6 +83,29 @@ gulp.task('clean', function() {
 gulp.task('clean:dist', function() {
   return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
 });
+//Performance budget
+gulp.task('louis', function() {
+  louis({
+    timeout: 60,
+    url: 'http://localhost:3000',
+    performanceBudget: {
+      requests: 10,
+      headersSize: 8000,
+      cssSize: 19000,
+      jsSize: 2000,
+      consoleMessages: 3,
+      imageSize: 700000,
+      domContentLoaded: 2000,
+      smallestLatency: 1000,
+      medianLatency: 10,
+      slowestResponse: 1000,
+      timeToFirstImage: 700
+      
+    }
+  });
+});
+
+
 
 // Build Sequences
 // ---------------
